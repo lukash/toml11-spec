@@ -30,7 +30,7 @@ A C++11 header-only toml parser/encoder. Compliant with TOML v1.0.0.
 %autosetup
 
 %build
-%cmake -Dtoml11_BUILD_TEST=1
+%cmake
 %cmake_build
 
 %install
