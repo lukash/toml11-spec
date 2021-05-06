@@ -1,18 +1,17 @@
-%global debug_package   %{nil}
+%global debug_package %{nil}
 
 Name:               toml11
+Version:            3.6.1
+Release:            1%{?dist}
 Summary:            Toml parser/encoder C++11 header-only library
 License:            MIT
-Release:            1%{?dist}
-Version:            3.6.1
+
+URL:                https://github.com/ToruNiina/%{name}/
+Source0:            https://github.com/ToruNiina/%{name}/archive/v%{version}.tar.gz
 
 BuildRequires:      cmake
 BuildRequires:      make
 BuildRequires:      gcc-c++
-BuildRequires:      boost-devel
-
-Url:                https://github.com/ToruNiina/%{name}/
-Source0:            https://github.com/ToruNiina/%{name}/archive/v%{version}.tar.gz
 
 %description
 A C++11 header-only toml parser/encoder. Compliant with TOML v1.0.0.
@@ -27,7 +26,7 @@ Requires:           libstdc++-devel
 A C++11 header-only toml parser/encoder. Compliant with TOML v1.0.0.
 
 %prep
-%autosetup
+%autosetup -p1
 
 %build
 %cmake
